@@ -659,10 +659,13 @@
         ========================== */
 
         const emergencyPage =
-            window.location.href.substring(
-                0,
-                window.location.href.lastIndexOf("/") + 1
-            ) + "emergency.html";
+    "https://kalyanig14.github.io/MEDI-PASS/emergency.html";
+
+const qrURL =
+    "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="
+    + encodeURIComponent(emergencyPage);
+
+document.getElementById("emergencyQR").src = qrURL;
 
 
         const qrURL =
