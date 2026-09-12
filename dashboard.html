@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MEDI-PASS | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✚</span> MEDI-PASS
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#emergency">Emergency</a>
+        </nav>
+
+        <button class="login-btn" onclick="loginUser()">
+            Profile
+        </button>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+    <main class="dashboard-page">
+
+        <div class="dashboard-header">
+
+            <div>
+                <p class="dashboard-label">MEDICAL DASHBOARD</p>
+
+               <h1>Welcome, <span id="patientName">Patient</span> 👋</h1>
+                <p>
+                    Your important health information at a glance.
+                </p>
+            </div>
+
+            <a href="index.html" class="secondary-btn">
+                ← Home
+            </a>
+
+        </div>
+
+
+        <!-- VITALS -->
+        <section class="dashboard-section">
+
+            <h2>❤️ Current Health Vitals</h2>
+
+            <div class="vitals-grid">
+
+                <div class="vital-card">
+                    <span>Blood Pressure</span>
+                    <strong>70/40</strong>
+                    <small>mmHg</small>
+                </div>
+
+                <div class="vital-card">
+                    <span>Heart Rate</span>
+                    <strong>78</strong>
+                    <small>BPM</small>
+                </div>
+
+                <div class="vital-card">
+                    <span>SpO₂</span>
+                    <strong>98%</strong>
+                    <small>Oxygen Level</small>
+                </div>
+
+                <div class="vital-card">
+                    <span>Blood Sugar</span>
+                    <strong>96</strong>
+                    <small>mg/dL</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HEALTH INFORMATION -->
+        <section class="dashboard-section">
+
+            <h2>📋 Medical Information</h2>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">💊</div>
+
+                    <h3>Current Medicines</h3>
+
+                    <p>
+                        1 active medicine
+                    </p>
+
+                    <button class="card-button">
+                        View Medicines
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card alert-card">
+
+                    <div class="dashboard-icon">⚠️</div>
+
+                    <h3>Critical Allergies</h3>
+
+                    <p>
+                        Drug Allergy
+                    </p>
+
+                    <button class="card-button">
+                        View Alerts
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">📄</div>
+
+                    <h3>Medical Reports</h3>
+
+                    <p>
+                        3 reports stored
+                    </p>
+
+                    <button class="card-button">
+                        View Reports
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">🧠</div>
+
+                    <h3>AI Health Memory</h3>
+
+                    <p>
+                        Verified medical timeline
+                    </p>
+
+                    <button class="card-button">
+                        View Timeline
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMERGENCY -->
+        <section class="dashboard-emergency">
+
+            <div>
+
+                <span>🚨 EMERGENCY ACCESS</span>
+
+                <h2>Your emergency information is ready.</h2>
+
+                <p>
+                    Quickly show life-critical medical information
+                    when required.
+                </p>
+
+            </div>
+
+            <button
+                class="secondary-btn"
+                onclick="emergencyCard()">
+
+                🚨 Emergency Card
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+<script>
+    const patientData = JSON.parse(
+        localStorage.getItem("mediPassPatient")
+    );
+
+    if (patientData && patientData.name) {
+        document.getElementById("patientName").textContent =
+            patientData.name;
+    }
+</script>
+</body>
+
+</html>

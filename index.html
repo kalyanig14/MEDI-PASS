@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MEDI-PASS | Medical Memory & Emergency Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✚</span> MEDI-PASS
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#features">Features</a>
+            <a href="#emergency">Emergency</a>
+        </nav>
+
+        <a href="register.html" class="login-btn">
+            Login
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🛡️ Secure Medical Memory
+            </div>
+
+            <h1>
+                When you can't explain,
+                <span>your medical history speaks.</span>
+            </h1>
+
+            <p>
+                MEDI-PASS securely stores your medical history,
+                medicines, allergies, reports and emergency
+                information in one easy-to-access place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="register.html" class="primary-btn">
+                    Get Started
+                </a>
+
+                <button
+                    class="secondary-btn"
+                    onclick="emergencyCard()">
+                    🚨 Emergency Card
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MEDICAL EMERGENCY CARD
+        ========================== -->
+
+        <div class="medical-card">
+
+            <div class="card-top">
+
+                <div>
+                    <small>MEDICAL EMERGENCY CARD</small>
+                    <h2>MEDI-PASS</h2>
+                </div>
+
+                <div class="cross">
+                    ✚
+                </div>
+
+            </div>
+
+
+            <div class="patient">
+
+                <div class="avatar">
+                    DP
+                </div>
+
+                <div>
+                    <h2 id="emergencyPatientName">
+                        Patient
+                    </h2>
+
+                    <p>
+                        <span id="emergencyPatientAge">
+                            Age
+                        </span>
+                        Years •
+                        <span id="emergencyPatientGender">
+                            Gender
+                        </span>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="warning">
+
+                ⚠️ CRITICAL ALERT
+
+                <strong>
+                    Drug Allergy
+                </strong>
+
+            </div>
+
+
+            <div class="card-info">
+
+                <div>
+                    <small>Blood Group</small>
+                    <strong id="emergencyBlood">
+                        O+
+                    </strong>
+                </div>
+
+                <div>
+                    <small>Blood Pressure</small>
+                    <strong>
+                        70/40
+                    </strong>
+                </div>
+
+                <div>
+                    <small>SpO₂</small>
+                    <strong>
+                        98%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- QR CODE -->
+
+            <div class="qr">
+
+                <div class="qr-box">
+
+                    <img
+                        id="emergencyQR"
+                        alt="Emergency Medical QR Code"
+                        width="180"
+                        height="180"
+                    >
+
+                </div>
+
+                <p>
+                    Scan for
+                    <span id="scanPatientName">
+                        emergency
+                    </span>
+                    medical information
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES / DASHBOARD
+    ========================== -->
+
+    <section class="features" id="dashboard">
+
+        <div class="section-heading">
+
+            <span>
+                MEDICAL DASHBOARD
+            </span>
+
+            <h2>
+                Your health information,
+                all in one place.
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <!-- HEALTH VITALS -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('vitals.html', '_blank')">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Health Vitals
+                </h3>
+
+                <p>
+                    Monitor blood pressure, heart rate,
+                    SpO₂, sugar and other important vitals.
+                </p>
+
+            </div>
+
+
+            <!-- MEDICINES -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('medicines.html', '_blank')">
+
+                <div class="icon">
+                    💊
+                </div>
+
+                <h3>
+                    Medicines
+                </h3>
+
+                <p>
+                    Keep track of current medicines,
+                    dosage, timing and medicine history.
+                </p>
+
+            </div>
+
+
+            <!-- MEDICAL REPORTS -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('reports.html', '_blank')">
+
+                <div class="icon">
+                    📄
+                </div>
+
+                <h3>
+                    Medical Reports
+                </h3>
+
+                <p>
+                    Store prescriptions, blood reports,
+                    ECG, X-ray and other medical documents.
+                </p>
+
+            </div>
+
+
+            <!-- AI HEALTH MEMORY -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('ai-memory.html', '_blank')">
+
+                <div class="icon">
+                    🧠
+                </div>
+
+                <h3>
+                    AI Health Memory
+                </h3>
+
+                <p>
+                    Get a simple timeline of verified
+                    medical information from your records.
+                </p>
+
+            </div>
+
+
+            <!-- ALLERGIES -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('allergies.html', '_blank')">
+
+                <div class="icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Allergies & Alerts
+                </h3>
+
+                <p>
+                    Keep critical allergies and important
+                    medical alerts visible during emergencies.
+                </p>
+
+            </div>
+
+
+            <!-- DOCTOR ACCESS -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('doctor.html', '_blank')">
+
+                <div class="icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Doctor Access
+                </h3>
+
+                <p>
+                    Share selected medical information
+                    securely with your doctor.
+                </p>
+
+            </div>
+
+
+            <!-- MEDICAL TIMELINE -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('timeline.html', '_blank')">
+
+                <div class="icon">
+                    📅
+                </div>
+
+                <h3>
+                    Medical Timeline
+                </h3>
+
+                <p>
+                    View diagnoses, hospital visits,
+                    medicines and reports chronologically.
+                </p>
+
+            </div>
+
+
+            <!-- FAMILY PROFILES -->
+
+            <div
+                class="feature-card"
+                onclick="window.open('family.html', '_blank')">
+
+                <div class="icon">
+                    👨‍👩‍👧
+                </div>
+
+                <h3>
+                    Family Profiles
+                </h3>
+
+                <p>
+                    Maintain separate medical profiles
+                    for family members.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EMERGENCY SECTION
+    ========================== -->
+
+    <section
+        class="emergency-section"
+        id="emergency">
+
+        <div>
+
+            <div class="emergency-label">
+                🚨 EMERGENCY ACCESS
+            </div>
+
+            <h2>
+                Important information,
+                available when it matters.
+            </h2>
+
+            <p>
+                The MEDI-PASS Emergency Card gives healthcare
+                professionals quick access to life-critical
+                information without exposing the patient's
+                complete medical history.
+            </p>
+
+            <button
+                class="secondary-btn"
+                onclick="emergencyCard()">
+
+                🚨 View Emergency Card
+
+            </button>
+
+        </div>
+
+
+        <div class="emergency-box">
+
+            <h3>
+                Emergency Profile
+            </h3>
+
+
+            <div class="emergency-item">
+
+                <span>
+                    Patient
+                </span>
+
+                <strong id="emergencyProfileName">
+                    Patient
+                </strong>
+
+            </div>
+
+
+            <div class="emergency-item danger">
+
+                <span>
+                    Critical Allergy
+                </span>
+
+                <strong id="emergencyProfileAllergy">
+                    Drug Allergy
+                </strong>
+
+            </div>
+
+
+            <div class="emergency-item">
+
+                <span>
+                    Blood Group
+                </span>
+
+                <strong id="emergencyProfileBlood">
+                    O+
+                </strong>
+
+            </div>
+
+
+            <div class="emergency-item">
+
+                <span>
+                    Blood Pressure
+                </span>
+
+                <strong>
+                    70/40
+                </strong>
+
+            </div>
+
+
+            <div class="emergency-item">
+
+                <span>
+                    Emergency Contact
+                </span>
+
+                <strong id="emergencyProfileContact">
+                    Available
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+            <span>✚</span> MEDI-PASS
+        </div>
+
+        <p>
+            Medical Memory & Emergency Intelligence
+        </p>
+
+        <small>
+            Your medical history shouldn't depend on your memory.
+        </small>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+    <script>
+
+        const patientData = JSON.parse(
+            localStorage.getItem("mediPassPatient")
+        );
+
+
+        if (patientData) {
+
+            /* Patient name */
+
+            const patientName =
+                patientData.name || "Patient";
+
+
+            document.getElementById(
+                "emergencyPatientName"
+            ).textContent = patientName;
+
+
+            document.getElementById(
+                "emergencyProfileName"
+            ).textContent = patientName;
+
+
+            /* Gender */
+
+            document.getElementById(
+                "emergencyPatientGender"
+            ).textContent =
+                patientData.gender || "Not specified";
+
+
+            /* Blood group */
+
+            if (patientData.blood) {
+
+                document.getElementById(
+                    "emergencyBlood"
+                ).textContent =
+                    patientData.blood;
+
+                document.getElementById(
+                    "emergencyProfileBlood"
+                ).textContent =
+                    patientData.blood;
+            }
+
+
+            /* Allergy */
+
+            if (patientData.allergies) {
+
+                document.getElementById(
+                    "emergencyProfileAllergy"
+                ).textContent =
+                    patientData.allergies;
+            }
+
+
+            /* Scan text */
+
+            document.getElementById(
+                "scanPatientName"
+            ).textContent =
+                patientName + "'s";
+
+
+            /* Age calculation */
+
+            if (patientData.dob) {
+
+                const birthDate =
+                    new Date(patientData.dob);
+
+                const today =
+                    new Date();
+
+                let age =
+                    today.getFullYear() -
+                    birthDate.getFullYear();
+
+
+                const monthDifference =
+                    today.getMonth() -
+                    birthDate.getMonth();
+
+
+                if (
+                    monthDifference < 0 ||
+                    (
+                        monthDifference === 0 &&
+                        today.getDate() <
+                        birthDate.getDate()
+                    )
+                ) {
+
+                    age--;
+
+                }
+
+
+                document.getElementById(
+                    "emergencyPatientAge"
+                ).textContent = age;
+
+            }
+
+
+            /* Emergency contact */
+
+            if (patientData.emergencyName) {
+
+                document.getElementById(
+                    "emergencyProfileContact"
+                ).textContent =
+                    patientData.emergencyName;
+
+            }
+
+        }
+
+
+        /* =========================
+           QR CODE
+        ========================== */
+
+        const emergencyPage =
+            window.location.href.substring(
+                0,
+                window.location.href.lastIndexOf("/") + 1
+            ) + "emergency.html";
+
+
+        const qrURL =
+            "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="
+            + encodeURIComponent(emergencyPage);
+
+
+        document.getElementById(
+            "emergencyQR"
+        ).src = qrURL;
+
+    </script>
+
+</body>
+
+</html>
