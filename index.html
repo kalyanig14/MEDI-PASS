@@ -658,14 +658,16 @@
            QR CODE
         ========================== */
 
-        const emergencyPage =
-    "https://kalyanig14.github.io/MEDI-PASS/emergency.html";
+        <script>
+    const emergencyPage =
+        "https://kalyanig14.github.io/MEDI-PASS/emergency.html";
 
-const qrURL =
-    "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="
-    + encodeURIComponent(emergencyPage);
+    const qrURL =
+        "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="
+        + encodeURIComponent(emergencyPage);
 
-document.getElementById("emergencyQR").src = qrURL;
+    document.getElementById("emergencyQR").src = qrURL;
+</script>
 
 
         const qrURL =
